@@ -11,9 +11,12 @@ const errHandler = require("./Middleware/errHandler");
 
 connectDB();
 app.use(logger);
-
+//localhost:3000
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://TechProjectFront");
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://techprojectfront.onrender.com"
+  );
   res.header("Access-Control-Allow-Credentials", "true");
   res.header(
     "Access-Control-Allow-Methods",
